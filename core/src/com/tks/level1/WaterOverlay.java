@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 class WaterOverlay extends AbstractGameObject {
     private TextureRegion regWaterOverlay;
-    private float length;
-    private Assets assets;
+    private final float length;
+    private final Assets assets;
 
     WaterOverlay(float length){
         this.length = length;

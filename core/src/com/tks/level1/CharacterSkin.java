@@ -8,8 +8,8 @@ enum CharacterSkin {
     GRAY("Gray", 0.7f, 0.7f, 0.7f),
     BROWN("Brown", 0.7f, 0.5f, 0.3f);
 
-    private String name;
-    private Color color = new Color();
+    private final String name;
+    private final Color color = new Color();
 
     private CharacterSkin (String name, float r, float g, float b){
         this.name = name;

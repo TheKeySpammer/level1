@@ -12,7 +12,7 @@ class GameScreen implements Screen, Constants {
     private WorldRenderer worldRenderer;
     private SpriteBatch batch;
     private Assets assets;
-    private MyGame game;
+    private final MyGame game;
 
     GameScreen (MyGame game){
         this.game = game;

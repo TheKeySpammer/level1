@@ -11,9 +11,9 @@ class Clouds extends AbstractGameObject {
     private Array<TextureRegion> regClouds;
     private Array<Cloud> clouds;
 
-    private float length;
+    private final float length;
 
-    private class Cloud extends AbstractGameObject{
+    private static class Cloud extends AbstractGameObject{
         private TextureRegion regCloud;
         Cloud(){}
 

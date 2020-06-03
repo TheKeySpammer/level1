@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.Vector2;
 class CameraHelper {
 
     private float zoom;
-    private Vector2 position;
+    private final Vector2 position;
     private AbstractGameObject target;
     private final float FOLLOW_SPEED = 4.0f;
 

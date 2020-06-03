@@ -10,7 +10,7 @@ class Mountains extends AbstractGameObject {
     private TextureRegion mountainleft;
     private TextureRegion mountainright;
     private int length;
-    private Assets assets;
+    private final Assets assets;
 
     Mountains(int length){
         this.length = length;

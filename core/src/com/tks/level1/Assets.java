@@ -89,14 +89,14 @@ public class Assets implements Disposable, AssetErrorListener {
 
     }
 
-    class AssetBunny{
+    static class AssetBunny{
         final TextureAtlas.AtlasRegion bunny_head;
         AssetBunny(TextureAtlas atlas){
             bunny_head = atlas.findRegion("bunny_head");
         }
     }
 
-    class AssetRock{
+    static class AssetRock{
         final TextureAtlas.AtlasRegion edge;
         final TextureAtlas.AtlasRegion middle;
 
@@ -106,12 +106,12 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
-    class AssetCarrot{
+    static class AssetCarrot{
         final TextureAtlas.AtlasRegion carrot;
         AssetCarrot(TextureAtlas atlas){carrot = atlas.findRegion("carrot");}
     }
 
-    class AssetGoldCoin{
+    static class AssetGoldCoin{
         final TextureAtlas.AtlasRegion goldCoin;
         AssetGoldCoin(TextureAtlas atlas){
             goldCoin = atlas.findRegion("item_gold_coin");
@@ -119,21 +119,21 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
-    class AssetGoal {
+    static class AssetGoal {
         final TextureAtlas.AtlasRegion goal;
         AssetGoal(TextureAtlas atlas){
             goal = atlas.findRegion("goal");
         }
     }
 
-    class AssetFeather{
+    static class AssetFeather{
         final TextureAtlas.AtlasRegion feather;
         AssetFeather(TextureAtlas atlas){
             feather = atlas.findRegion("item_feather");
         }
     }
 
-    class AssetLevelDecoration{
+    static class AssetLevelDecoration{
         final TextureAtlas.AtlasRegion cloud01;
         final TextureAtlas.AtlasRegion cloud02;
         final TextureAtlas.AtlasRegion cloud03;
@@ -150,7 +150,7 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
-    public class AssetFonts {
+    public static class AssetFonts {
         BitmapFont defaultSmall;
         BitmapFont defaultNormal;
         BitmapFont defaultBig;
@@ -172,7 +172,7 @@ public class Assets implements Disposable, AssetErrorListener {
 
     }
 
-    class AssetSounds {
+    static class AssetSounds {
         Sound jump;
         Sound jumpWithFeather;
         Sound pickUpCoin;
@@ -187,7 +187,7 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
-    class AssetMusic {
+    static class AssetMusic {
         Music song01;
         AssetMusic( AssetManager am) {
             song01 = am.get("Music/keith303_-_brand_new_highscore.mp3", Music.class);

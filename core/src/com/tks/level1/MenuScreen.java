@@ -25,7 +25,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 class MenuScreen implements Screen {
 
     static final String TAG = MenuScreen.class.getName();
-    private MyGame game;
+    private final MyGame game;
     private Stage stage;
     private Skin skinCanyonBunny;
 
@@ -52,7 +52,7 @@ class MenuScreen implements Screen {
 
 //    Debug
     private final float DEBUG_REBUILD_INTERVAL = 5.0f;
-    private boolean debunEnabled = false;
+    private final boolean debunEnabled = false;
     private float debugRebuildStage;
 
     private Skin skinLibgdx;

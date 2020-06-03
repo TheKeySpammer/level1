@@ -18,7 +18,7 @@ class BunnyHead extends AbstractGameObject implements Constants{
 
 
 
-    private ParticleEffect dustParticles = new ParticleEffect();
+    private final ParticleEffect dustParticles = new ParticleEffect();
 
     BunnyHead (){
         init();
@@ -64,7 +64,7 @@ class BunnyHead extends AbstractGameObject implements Constants{
                 break;
             case FALLING: // Falling down
             case JUMP_FALLING: // falling down after jump
-                if (jumpKeyPressed && hasFeatherPowerup()){
+                if (jumpKeyPressed && hasFeatherPowerUp()){
                     AudioManger.getInstance().play(Assets.getInstance().sounds.jumpWithFeather, 1, MathUtils.random(1.0f, 1.1f));
                     timeJumping = JUMP_TIME_OFFSET_FLYING;
                     jump_state = JUMP_STATE.JUMP_RISING;
@@ -81,7 +81,7 @@ class BunnyHead extends AbstractGameObject implements Constants{
     }
 
 
-    private boolean hasFeatherPowerup () {return hasFeatherPowerup && timeLeftFeatherPowerup > 0;}
+    private boolean hasFeatherPowerUp() {return hasFeatherPowerup && timeLeftFeatherPowerup > 0;}
 
     @Override
     void render(SpriteBatch batch) {
@@ -93,7 +93,7 @@ class BunnyHead extends AbstractGameObject implements Constants{
         dustParticles.draw(batch);
 
 //        Set special color when game object has a feather power-up
-        if (hasFeatherPowerup()){
+        if (hasFeatherPowerUp()){
             batch.setColor(1.0f, 0.8f, 0, 1);
         }
 

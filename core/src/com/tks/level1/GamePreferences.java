@@ -14,7 +14,7 @@ class GamePreferences {
     int charSkin;
     boolean showFPS;
 
-    private Preferences prefs;
+    private final Preferences prefs;
 
 //    Singleton
     private GamePreferences(){

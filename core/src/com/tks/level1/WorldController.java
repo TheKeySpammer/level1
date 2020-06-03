@@ -21,15 +21,15 @@ class WorldController extends InputAdapter implements Disposable {
     Level level;
     int lives;
     int score;
-    private MyGame game;
+    private final MyGame game;
     float livesVisual;
     int currentLevel;
 
     private boolean goalReached;
     World world;
 
-    private Rectangle r1 = new Rectangle();
-    private Rectangle r2 = new Rectangle();
+    private final Rectangle r1 = new Rectangle();
+    private final Rectangle r2 = new Rectangle();
     private float timeLeftGameOverDelay;
 
     private final static String TAG = WorldController.class.getName();
@@ -206,12 +206,7 @@ class WorldController extends InputAdapter implements Disposable {
             }
 
 //            Bunny Jump
-            if (Gdx.input.isTouched() || Gdx.input.isKeyPressed(Input.Keys.SPACE)){
-                level.bunnyHead.setJumping(true);
-            }
-            else{
-                level.bunnyHead.setJumping(false);
-            }
+            level.bunnyHead.setJumping(Gdx.input.isTouched() || Gdx.input.isKeyPressed(Input.Keys.SPACE));
         }
     }
 
